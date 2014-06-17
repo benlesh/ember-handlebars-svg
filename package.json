@@ -1,0 +1,35 @@
+{
+  "name": "ember-handlebars-svg",
+  "version": "0.0.0",
+  "description": "An add-on to make Handlebars play nice with SVG",
+  "main": "ember-handlebars-svg.js",
+  "dependencies": {
+    "broccoli": "~0.12.3"
+  },
+  "devDependencies": {
+    "broccoli": "^0.12.3",
+    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-concat": "0.0.6",
+    "broccoli-uglify-js": "^0.1.3",
+    "broccoli-static-compiler": "^0.1.4",
+    "broccoli-file-mover": "^0.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blesh/ember-handlebars-svg.git"
+  },
+  "keywords": [
+    "EmberJS",
+    "SVG",
+    "Handlebars"
+  ],
+  "author": "Ben Lesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blesh/ember-handlebars-svg/issues"
+  },
+  "homepage": "https://github.com/blesh/ember-handlebars-svg"
+}
