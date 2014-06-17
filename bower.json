@@ -1,0 +1,26 @@
+{
+  "name": "ember-handlebars-svg",
+  "main": "dist/ember-handlebars-svg.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/blesh/ember-handlebars-svg",
+  "authors": [
+    "Ben Lesh <blesh@netflix.com>"
+  ],
+  "description": "add-on to give Ember-Handlebars SVG support",
+  "keywords": [
+    "EmberJS",
+    "Handlebars",
+    "SVG"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ember": "canary"
+  }
+}
