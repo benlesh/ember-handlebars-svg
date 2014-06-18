@@ -1,6 +1,6 @@
 {
   "name": "ember-handlebars-svg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An add-on to make Handlebars play nice with SVG",
   "main": "ember-handlebars-svg.js",
   "dependencies": {
