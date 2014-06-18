@@ -18,7 +18,14 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "Brocfile.js",
+    "karma.conf.js",
+    "package.json",
+    ".gitignore",
+    "jquery-svg",
+    "src",
+    "tmp"
   ],
   "devDependencies": {
     "ember": "canary"
