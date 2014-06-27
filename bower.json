@@ -1,6 +1,6 @@
 {
   "name": "ember-handlebars-svg",
-  "main": "dist/ember-handlebars-svg.js",
+  "main": "ember-handlebars-svg.js",
   "version": "0.0.2",
   "homepage": "https://github.com/blesh/ember-handlebars-svg",
   "authors": [
@@ -23,11 +23,9 @@
     "karma.conf.js",
     "package.json",
     ".gitignore",
-    "jquery-svg",
-    "src",
     "tmp"
   ],
-  "devDependencies": {
+  "dependencies": {
     "ember": "canary"
   }
 }
