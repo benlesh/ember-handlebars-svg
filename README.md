@@ -9,7 +9,7 @@ This will only work with the latest Canary version of Ember.js, as it relies on 
 
 ## Additional JQuery Support
 
-This bower package includes a directory called `jquery-svg/` under which you'll find files for adding SVG support to JQuery.
+If you need additional JQuery support (for example addClass), then look at: http://github.com/kbwood/svg
 
 ## Bower
 
