@@ -3,7 +3,7 @@
  * © Ben Lesh 2014 - http://github.com/blesh/ember-handlebars-svg
  * MIT License
  */
-(function(Ember){
+(function(Ember, $){
 	if(!Ember._metamorphWrapMap) {
 		throw new Error('Unable to patch Ember Handlebars, _metamorphWrapMap not found');
 	}
@@ -20,4 +20,23 @@
 	Ember._metamorphSvgTags.forEach(function(tag){
 		Ember._metamorphWrapMap[tag] = [1, '<svg>', '</svg>'];
 	});
+
+	if($) {
+		var addClass = $.fn.addClass;
+		var removeClass = $.fn.removeClass;
+		var tmp;
+
+		var patchFunction = function(fn) {
+			return function(value) {
+				var self = this;
+				tmp = tmp || document.createElement('div');
+				fn.call([tmp], value);
+				$(self).attr('class', tmp.className);
+				return self;
+			}
+		}
+
+		$.fn.addClass = patchFunction(addClass);
+		$.fn.removeClass = patchFunction(removeClass);
+	}
 }(Ember, jQuery));
