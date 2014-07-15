@@ -22,21 +22,20 @@
 	});
 
 	if($) {
-		var addClass = $.fn.addClass;
-		var removeClass = $.fn.removeClass;
-		var tmp;
+		// Modern browsers only for now!
+    // Open to pull requests.
+		$.fn.addClass = function(value) {
+		  $(this).each(function(){
+		    this.classList.add(value);
+		  });
+		  return this;
+		};
 
-		var patchFunction = function(fn) {
-			return function(value) {
-				var self = this;
-				tmp = tmp || document.createElement('div');
-				fn.call([tmp], value);
-				$(self).attr('class', tmp.className);
-				return self;
-			}
-		}
-
-		$.fn.addClass = patchFunction(addClass);
-		$.fn.removeClass = patchFunction(removeClass);
+		$.fn.removeClass = function(value) {
+		  $(this).each(function(){
+		    this.classList.remove(value);
+		  });
+		  return this;
+		};
 	}
 }(Ember, jQuery));
