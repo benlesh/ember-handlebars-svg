@@ -1,7 +1,7 @@
 {
   "name": "ember-handlebars-svg",
   "main": "ember-handlebars-svg.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://github.com/blesh/ember-handlebars-svg",
   "authors": [
     "Ben Lesh <blesh@netflix.com>"
