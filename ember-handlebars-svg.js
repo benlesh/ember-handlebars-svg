@@ -21,20 +21,34 @@
 		Ember._metamorphWrapMap[tag] = [1, '<svg>', '</svg>'];
 	});
 
+	function applyClasses(elem, value, fn) {
+		var classes = value.split(' ');
+	  $(elem).each(function(){
+	  	var item = this;
+	  	var i, len, cls;
+	  	for(i = 0, len = classes.length; i < len; i++) {
+	  		cls = classes[i];
+	  		if(cls) {
+	    		fn(item, cls);  			
+	  		}
+	  	}
+	  });
+	}
+
 	if($) {
 		// Modern browsers only for now!
     // Open to pull requests.
 		$.fn.addClass = function(value) {
-		  $(this).each(function(){
-		    this.classList.add(value);
-		  });
+			applyClasses(this, value, function(elem, cls) {
+				elem.classList.add(cls);
+			});
 		  return this;
 		};
 
 		$.fn.removeClass = function(value) {
-		  $(this).each(function(){
-		    this.classList.remove(value);
-		  });
+			applyClasses(this, value, function(elem, cls) {
+				elem.classList.remove(cls);
+			});
 		  return this;
 		};
 	}
